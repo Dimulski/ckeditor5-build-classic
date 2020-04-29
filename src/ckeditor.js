@@ -31,8 +31,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
 // Additional Plugins 
-// import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
-import StrapiUploadAdapter from '@martinkronstad/ckeditor5-strapi-upload-adapter'; 
+import { GraphQLUploadAdapter } from './graphQLUploadAdapter.js';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -61,7 +60,7 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	StrapiUploadAdapter
+	GraphQLUploadAdapter
 ];
 
 // Editor configuration.
