@@ -26,12 +26,19 @@ import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
-import Table from '@ckeditor/ckeditor5-table/src/table';
-import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
-// Additional Plugins 
+// Additional Plugins
 import { GraphQLUploadAdapter } from './graphQLUploadAdapter.js';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -57,10 +64,17 @@ ClassicEditor.builtinPlugins = [
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
-	Table,
-	TableToolbar,
 	TextTransformation,
-	GraphQLUploadAdapter
+	GraphQLUploadAdapter,
+	ImageResize,
+	Alignment,
+	Underline,
+	Strikethrough,
+	Subscript,
+	Superscript,
+	RemoveFormat,
+	IndentBlock,
+	HorizontalLine
 ];
 
 // Editor configuration.
@@ -71,35 +85,49 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
+			'underline',
+			'strikethrough',
+			'|',
+			'alignment:left',
+			'alignment:center',
+			'alignment:right',
+			'alignment:justify',
 			'|',
 			'indent',
 			'outdent',
 			'|',
+			'bulletedList',
+			'numberedList',
+			'|',
+			'link',
 			'imageUpload',
 			'blockQuote',
-			'insertTable',
 			'mediaEmbed',
+			'removeFormat',
+			'subscript',
+			'superscript',
+			'horizontalLine',
 			'undo',
 			'redo'
 		]
 	},
 	image: {
 		toolbar: [
+			'imageStyle:alignLeft',
 			'imageStyle:full',
-			'imageStyle:side',
+			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
+		],
+		styles: [
+			'full',
+			'alignLeft',
+			'alignRight'
 		]
 	},
-	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells'
-		]
+	indentBlock: {
+		offset: 1,
+		unit: 'em'
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
