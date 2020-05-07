@@ -92,7 +92,7 @@
   ],
   "dependencies": {
     "@ckeditor/ckeditor5-alignment": "^19.0.0",
-    "@ckeditor/ckeditor5-horizontal-line": "^19.0.0",
+    "@ckeditor/ckeditor5-font": "^19.0.0",
     "@ckeditor/ckeditor5-remove-format": "^19.0.0"
   }
 }

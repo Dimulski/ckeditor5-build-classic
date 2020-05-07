@@ -38,7 +38,7 @@ import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
-import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -74,7 +74,7 @@ ClassicEditor.builtinPlugins = [
 	Superscript,
 	RemoveFormat,
 	IndentBlock,
-	HorizontalLine
+	Font
 ];
 
 // Editor configuration.
@@ -82,6 +82,10 @@ ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
+			'|',
+			'fontSize',
+			'fontColor',
+			'fontBackgroundColor',
 			'|',
 			'bold',
 			'italic',
@@ -106,7 +110,6 @@ ClassicEditor.defaultConfig = {
 			'removeFormat',
 			'subscript',
 			'superscript',
-			'horizontalLine',
 			'undo',
 			'redo'
 		]
@@ -120,14 +123,32 @@ ClassicEditor.defaultConfig = {
 			'imageTextAlternative'
 		],
 		styles: [
-			'full',
-			'alignLeft',
-			'alignRight'
+			{ name: 'alignLeft', title: 'Left aligned image', icon: 'left',
+				className: [ 'image-style-align-left', 'float-left', 'mr-5', 'my-2' ] },
+			{ name: 'full', title: 'Center aligned image' },
+			{ name: 'alignRight', title: 'Right aligned image', icon: 'right',
+				className: [ 'image-style-align-right', 'float-right', 'ml-5', 'my-2' ] }
 		]
 	},
 	indentBlock: {
 		offset: 1,
 		unit: 'em'
+	},
+	fontSize: {
+		options: [
+			'tiny',
+			'small',
+			'default',
+			'big',
+			'huge'
+		]
+	},
+	link: {
+		addTargetToExternalLinks: true
+	},
+	mediaEmbed: {
+		previewsInData: true,
+		removeProviders: [ 'instagram', 'twitter', 'googleMaps', 'flickr', 'facebook' ]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
