@@ -1,6 +1,6 @@
 {
   "name": "@dimulski/ckeditor5-build-classic-cc-mt",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The classic editor build of CKEditor 5 with a few additions.",
   "keywords": [
     "custom",
