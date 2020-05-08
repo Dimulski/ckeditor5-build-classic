@@ -117,16 +117,23 @@ ClassicEditor.defaultConfig = {
 	},
 	heading: {
 		options: [
-			{ model: 'paragraph', view: { name: 'p', classes: 'd-table' }, title: 'Paragraph', class: 'ck-heading_paragraph' },
 			{
-				model: 'paragraphWrapped',
+				model: 'paragraphDTable',
 				view: {
 					name: 'p',
-					classes: 'p-wrapped'
+					classes: 'd-table'
 				},
-				title: 'Wrapped Paragraph (images)',
+				title: 'Paragraph',
 				class: 'ck-heading_paragraph',
 				converterPriority: 'high'
+			},
+			{
+				model: 'paragraph',
+				view: {
+					name: 'p'
+				},
+				title: 'Wrapped Paragraph (Images)',
+				class: 'ck-heading_paragraph'
 			},
 			{ model: 'heading1', view: { name: 'h1', classes: 'd-table' }, title: 'Heading 1', class: 'ck-heading_heading1' },
 			{ model: 'heading2', view: { name: 'h2', classes: 'd-table' }, title: 'Heading 2', class: 'ck-heading_heading2' },
