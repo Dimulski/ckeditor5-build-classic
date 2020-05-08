@@ -117,10 +117,10 @@ ClassicEditor.defaultConfig = {
 	},
 	heading: {
 		options: [
-			{ model: 'paragraph', title: 'Paragraph', class: [ 'ck-heading_paragraph', 'd-table' ] },
-			{ model: 'heading1', view: 'h1', title: 'Heading 1', class: [ 'ck-heading_heading1', 'd-table' ] },
-			{ model: 'heading2', view: 'h2', title: 'Heading 2', class: [ 'ck-heading_heading2', 'd-table' ] },
-			{ model: 'heading3', view: 'h3', title: 'Heading 3', class: [ 'ck-heading_heading3', 'd-table' ] }
+			{ model: 'paragraph', view: { name: 'p', classes: 'd-table' }, title: 'Paragraph', class: [ 'ck-heading_paragraph', 'd-table' ] },
+			{ model: 'heading1', view: { name: 'h1', classes: 'd-table' }, title: 'Heading 1', class: [ 'ck-heading_heading1', 'd-table' ] },
+			{ model: 'heading2', view: { name: 'h2', classes: 'd-table' }, title: 'Heading 2', class: [ 'ck-heading_heading2', 'd-table' ] },
+			{ model: 'heading3', view: { name: 'h3', classes: 'd-table' }, title: 'Heading 3', class: [ 'ck-heading_heading3', 'd-table' ] }
 		]
 	},
 	image: {
