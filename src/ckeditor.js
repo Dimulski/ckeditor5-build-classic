@@ -118,6 +118,16 @@ ClassicEditor.defaultConfig = {
 	heading: {
 		options: [
 			{ model: 'paragraph', view: { name: 'p', classes: 'd-table' }, title: 'Paragraph', class: 'ck-heading_paragraph' },
+			{
+				model: 'paragraphWrapped',
+				view: {
+					name: 'p',
+					classes: 'p-wrapped'
+				},
+				title: 'Wrapped Paragraph (images)',
+				class: 'ck-heading_paragraph',
+				converterPriority: 'high'
+			},
 			{ model: 'heading1', view: { name: 'h1', classes: 'd-table' }, title: 'Heading 1', class: 'ck-heading_heading1' },
 			{ model: 'heading2', view: { name: 'h2', classes: 'd-table' }, title: 'Heading 2', class: 'ck-heading_heading2' },
 			{ model: 'heading3', view: { name: 'h3', classes: 'd-table' }, title: 'Heading 3', class: 'ck-heading_heading3' }
@@ -133,10 +143,10 @@ ClassicEditor.defaultConfig = {
 		],
 		styles: [
 			{ name: 'alignLeft', title: 'Left aligned image', icon: 'left',
-				className: [ 'image-style-align-left', 'float-left' ] },
-			{ name: 'full', title: 'Center aligned image' },
+				className: [ 'image-style-align-left', 'float-left', 'mr-lg-5', 'mb-2', 'mb-lg-3' ] },
+			{ name: 'full', title: 'Center aligned image', className: [ 'mb-2', 'mb-lg-3' ] },
 			{ name: 'alignRight', title: 'Right aligned image', icon: 'right',
-				className: [ 'image-style-align-right', 'float-right' ] }
+				className: [ 'image-style-align-right', 'float-right', 'ml-lg-5', 'mb-2', 'mb-lg-3' ] }
 		]
 	},
 	indentBlock: {
