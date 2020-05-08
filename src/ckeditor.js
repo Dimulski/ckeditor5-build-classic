@@ -80,6 +80,7 @@ ClassicEditor.builtinPlugins = [
 // Editor configuration.
 ClassicEditor.defaultConfig = {
 	toolbar: {
+		viewportTopOffset: 52,
 		items: [
 			'heading',
 			'|',
@@ -114,6 +115,14 @@ ClassicEditor.defaultConfig = {
 			'redo'
 		]
 	},
+	heading: {
+		options: [
+			{ model: 'paragraph', title: 'Paragraph', class: [ 'ck-heading_paragraph', 'd-table' ] },
+			{ model: 'heading1', view: 'h1', title: 'Heading 1', class: [ 'ck-heading_heading1', 'd-table' ] },
+			{ model: 'heading2', view: 'h2', title: 'Heading 2', class: [ 'ck-heading_heading2', 'd-table' ] },
+			{ model: 'heading3', view: 'h3', title: 'Heading 3', class: [ 'ck-heading_heading3', 'd-table' ] }
+		]
+	},
 	image: {
 		toolbar: [
 			'imageStyle:alignLeft',
@@ -124,10 +133,10 @@ ClassicEditor.defaultConfig = {
 		],
 		styles: [
 			{ name: 'alignLeft', title: 'Left aligned image', icon: 'left',
-				className: [ 'image-style-align-left', 'float-left', 'mr-5', 'my-2' ] },
+				className: [ 'image-style-align-left', 'float-left' ] },
 			{ name: 'full', title: 'Center aligned image' },
 			{ name: 'alignRight', title: 'Right aligned image', icon: 'right',
-				className: [ 'image-style-align-right', 'float-right', 'ml-5', 'my-2' ] }
+				className: [ 'image-style-align-right', 'float-right' ] }
 		]
 	},
 	indentBlock: {
