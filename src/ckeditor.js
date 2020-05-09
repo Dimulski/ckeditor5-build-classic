@@ -31,7 +31,6 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 // Additional Plugins
 import { GraphQLUploadAdapter } from './graphQLUploadAdapter.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
-import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
@@ -67,7 +66,6 @@ ClassicEditor.builtinPlugins = [
 	TextTransformation,
 	GraphQLUploadAdapter,
 	ImageResize,
-	Alignment,
 	Underline,
 	Strikethrough,
 	Subscript,
@@ -92,11 +90,6 @@ ClassicEditor.defaultConfig = {
 			'italic',
 			'underline',
 			'strikethrough',
-			'|',
-			'alignment:left',
-			'alignment:center',
-			'alignment:right',
-			'alignment:justify',
 			'|',
 			'indent',
 			'outdent',

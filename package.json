@@ -1,6 +1,6 @@
 {
   "name": "@dimulski/ckeditor5-build-classic-cc-mt",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "The classic editor build of CKEditor 5 with a few additions.",
   "keywords": [
     "custom",
@@ -91,7 +91,6 @@
     "packages/**"
   ],
   "dependencies": {
-    "@ckeditor/ckeditor5-alignment": "^19.0.0",
     "@ckeditor/ckeditor5-font": "^19.0.0",
     "@ckeditor/ckeditor5-remove-format": "^19.0.0"
   }
